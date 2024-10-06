@@ -9,7 +9,7 @@ export default function Form() {
     e.preventDefault();
 
     try {
-      const response = await fetch("https://crud-app-pearl-zeta.vercel.app/api/comments", {
+      const response = await fetch("/api/comments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
