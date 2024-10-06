@@ -23,16 +23,6 @@ export default function Comments() {
 
   return (
     <div className="p-5 bg-[#9D9D9D] w-[60%] flex flex-col justify-center items-center rounded-md">
-      {/* {isLoading ? (
-        <LoadingIcon />
-      ) : (
-        comments &&
-        comments.map((comment) => (
-          <div className="mb-2 p-5 w-full bg-red-500 rounded-md">
-            <p>{comment.comment}</p>
-          </div>
-        ))
-      )} */}
 
       {comments === null ? (
         <LoadingIcon />
@@ -40,7 +30,7 @@ export default function Comments() {
         <p>no comments</p>
       ) : (
         comments.map((comment) => (
-          <div className="mb-2 p-5 w-full bg-red-500 rounded-md">
+          <div className="mb-2 p-5 w-full bg-red-500 rounded-md" key={comment._id}>
             <p>{comment.comment}</p>
           </div>
         ))
