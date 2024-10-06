@@ -4,7 +4,6 @@ import LoadingIcon from "@/components/LoadingIcon";
 
 export default function Comments() {
   const [comments, setComments] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
 
   const getComments = async () => {
     setIsLoading(true);
@@ -18,7 +17,7 @@ export default function Comments() {
   };
 
   useEffect(() => {
-    getComments().then(setIsLoading(false));
+    getComments();
   }, []);
 
   return (
