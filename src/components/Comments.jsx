@@ -8,7 +8,7 @@ export default function Comments() {
 
   const getComments = async () => {
     setIsLoading(true);
-    const response = await fetch("/api/comments", {
+    const response = await fetch("https://crud-app-pearl-zeta.vercel.app/api/comments", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
