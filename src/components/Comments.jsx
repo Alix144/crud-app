@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LoadingIcon from "@/components/LoadingIcon";
 
 export default function Comments() {
@@ -17,7 +17,7 @@ export default function Comments() {
     setComments(data);
   };
 
-  useState(() => {
+  useEffect(() => {
     getComments().then(setIsLoading(false));
   }, []);
 

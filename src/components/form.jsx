@@ -23,7 +23,7 @@ export default function Form() {
   };
 
   return (
-    <form action="flex flex-col gap-3">
+    <form action="flex flex-col gap-3" onSubmit={(e)=>addComment(e)}>
       <input
         type="text"
         placeholder="comment"
@@ -31,7 +31,7 @@ export default function Form() {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       />
-      <button className="bg-slate-600 rounded-md w-full" onClick={(e)=>addComment(e)}>
+      <button className="bg-slate-600 rounded-md w-full">
         add
       </button>
     </form>
